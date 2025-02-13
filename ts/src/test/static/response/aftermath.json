@@ -1,0 +1,145 @@
+{
+    "exchange": "aftermath",
+    "skipKeys": [],
+    "options": {},
+    "methods": {
+        "fetchMarkets": [
+            {
+                "description": "fetchMarkets",
+                "method": "fetchMarkets",
+                "input": [],
+                "httpResponse": {
+                    "code": 0,
+                    "data": [
+                        {
+                            "packageId": "0x7c995f9c0c0553c0f3bfac7cf3c8b85716f0ca522305586bd0168ca20aeed277",
+                            "objectId": "0x136e5adea9184b455e7d8063575fb27f48b68012f71d6dcff5ffc6469df5b718",
+                            "initialSharedVersion": 272079658,
+                            "collateralCoinType": "0x457049371f5b5dc2bda857bb804ca6e93c5a3cae1636d0cd17bb6b6070d19458::usdc::USDC",
+                            "marketParams": {
+                            "marginRatioInitial": "10000000000000000n",
+                            "marginRatioMaintenance": "8999999999999999n",
+                            "baseAssetSymbol": "HYPEUSD",
+                            "basePriceFeedId": "0x5077aca44e03a9e2afa8a5869b81b1988102d44966242d4ad9a2998f06dc1236",
+                            "collateralPriceFeedId": "0xd10b385c82cba1f673a7456ebc97e0949eb4caa71b4a1a9bfe4d59384e79a279",
+                            "fundingFrequencyMs": "3600000n",
+                            "fundingPeriodMs": "86400000n",
+                            "premiumTwapFrequencyMs": "5000n",
+                            "premiumTwapPeriodMs": "3600000n",
+                            "spreadTwapFrequencyMs": "5000n",
+                            "spreadTwapPeriodMs": "3600000n",
+                            "makerFee": "0n",
+                            "takerFee": "1000000000000000n",
+                            "liquidationFee": "5000000000000000n",
+                            "forceCancelFee": "100000000000000n",
+                            "insuranceFundFee": "1000000000000000n",
+                            "minOrderUsdValue": "1000000000000000000n",
+                            "lotSize": "1000000n",
+                            "tickSize": "1n",
+                            "liquidationTolerance": "100n",
+                            "maxPendingOrders": "100n",
+                            "baseOracleTolerance": "30000n",
+                            "collateralOracleTolerance": "30000n"
+                            },
+                            "marketState": {
+                            "cumFundingRateLong": "878804383591718619939n",
+                            "cumFundingRateShort": "-5405618544234417513735n",
+                            "fundingLastUpdateMs": 1739386800814,
+                            "premiumTwap": "-19990594986054790n",
+                            "premiumTwapLastUpdateMs": 1739390254858,
+                            "spreadTwap": "-20218560401127927n",
+                            "spreadTwapLastUpdateMs": 1739390254858,
+                            "openInterest": "53540488000000000000000n",
+                            "feesAccrued": "355869979257548028795920n"
+                            },
+                            "collateralPrice": 0.99996984,
+                            "indexPrice": 24.70390757
+                        }
+                    ]
+                },
+                "parsedResponse": [
+                    {
+                        "id": "0x136e5adea9184b455e7d8063575fb27f48b68012f71d6dcff5ffc6469df5b718",
+                        "symbol": "HYPEUSD",
+                        "base": "HYPE",
+                        "quote": "USD",
+                        "settle": "USDC",
+                        "baseId": "HYPE",
+                        "quoteId": "USD",
+                        "settleId": "USDC",
+                        "type": "swap",
+                        "spot": false,
+                        "swap": true,
+                        "future": false,
+                        "option": false,
+                        "active": true,
+                        "contract": true,
+                        "linear": true,
+                        "inverse": false,
+                        "maker": 0,
+                        "taker": 0.001,
+                        "contractSize": 0.001,
+                        "precision": {
+                            "amount": 0.001,
+                            "price": 0.000001
+                        },
+                        "limits": {
+                            "leverage": {
+                                "max": 100
+                            },
+                            "amount": { },
+                            "price": { },
+                            "cost": {
+                                "min": 1
+                            }
+                        },
+                        "info": {
+                            "packageId": "0x7c995f9c0c0553c0f3bfac7cf3c8b85716f0ca522305586bd0168ca20aeed277",
+                            "objectId": "0x136e5adea9184b455e7d8063575fb27f48b68012f71d6dcff5ffc6469df5b718",
+                            "initialSharedVersion": 272079658,
+                            "collateralCoinType": "0x457049371f5b5dc2bda857bb804ca6e93c5a3cae1636d0cd17bb6b6070d19458::usdc::USDC",
+                            "marketParams": {
+                            "marginRatioInitial": "10000000000000000n",
+                            "marginRatioMaintenance": "8999999999999999n",
+                            "baseAssetSymbol": "HYPEUSD",
+                            "basePriceFeedId": "0x5077aca44e03a9e2afa8a5869b81b1988102d44966242d4ad9a2998f06dc1236",
+                            "collateralPriceFeedId": "0xd10b385c82cba1f673a7456ebc97e0949eb4caa71b4a1a9bfe4d59384e79a279",
+                            "fundingFrequencyMs": "3600000n",
+                            "fundingPeriodMs": "86400000n",
+                            "premiumTwapFrequencyMs": "5000n",
+                            "premiumTwapPeriodMs": "3600000n",
+                            "spreadTwapFrequencyMs": "5000n",
+                            "spreadTwapPeriodMs": "3600000n",
+                            "makerFee": "0n",
+                            "takerFee": "1000000000000000n",
+                            "liquidationFee": "5000000000000000n",
+                            "forceCancelFee": "100000000000000n",
+                            "insuranceFundFee": "1000000000000000n",
+                            "minOrderUsdValue": "1000000000000000000n",
+                            "lotSize": "1000000n",
+                            "tickSize": "1n",
+                            "liquidationTolerance": "100n",
+                            "maxPendingOrders": "100n",
+                            "baseOracleTolerance": "30000n",
+                            "collateralOracleTolerance": "30000n"
+                            },
+                            "marketState": {
+                            "cumFundingRateLong": "878804383591718619939n",
+                            "cumFundingRateShort": "-5405618544234417513735n",
+                            "fundingLastUpdateMs": 1739386800814,
+                            "premiumTwap": "-19990594986054790n",
+                            "premiumTwapLastUpdateMs": 1739390254858,
+                            "spreadTwap": "-20218560401127927n",
+                            "spreadTwapLastUpdateMs": 1739390254858,
+                            "openInterest": "53540488000000000000000n",
+                            "feesAccrued": "355869979257548028795920n"
+                            },
+                            "collateralPrice": 0.99996984,
+                            "indexPrice": 24.70390757
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
