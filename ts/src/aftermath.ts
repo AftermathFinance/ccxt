@@ -220,7 +220,7 @@ export default class aftermath extends Exchange {
             'optionType': undefined,
             'precision': {
                 'amount': contractSize,
-                'price': lotSize / tickSize,
+                'price': tickSize / lotSize,
             },
             'limits': {
                 'leverage': {
