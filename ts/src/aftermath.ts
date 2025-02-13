@@ -189,7 +189,7 @@ export default class aftermath extends Exchange {
         const minOrderUsdValue = this.safeNumber (marketParams, 'minOrderUsdValue') / IFIXED_ONE;
         return this.safeMarketStructure ({
             'id': this.safeString (market, 'objectId'),
-            'symbol': this.safeString (market, 'baseAssetSymbol'),
+            'symbol': this.safeString (marketParams, 'baseAssetSymbol'),
             'base': base,
             'quote': quote,
             'settle': settle,
