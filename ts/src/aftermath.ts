@@ -67,12 +67,7 @@ export default class aftermath extends Exchange {
                 '1M': '1M',
             },
             'urls': {
-                'logo': 'TODO',
                 'api': 'https://staging-second.aftermath.finance/api/perpetuals',
-                'www': 'https://www.aftermath.finance/',
-                'doc': [
-                    'TODO',
-                ],
             },
             'api': {
                 'public': {
@@ -243,5 +238,16 @@ export default class aftermath extends Exchange {
             'created': undefined,
             'info': market,
         });
+    }
+
+    sign (path, api = 'public', method = 'POST', params = {}, headers = undefined, body = undefined) {
+        const url = this.urls['api'] + '/' + path;
+        if (method === 'POST') {
+            headers = {
+                'Content-Type': 'application/json',
+            };
+            body = this.json (params);
+        }
+        return { 'url': url, 'method': method, 'body': body, 'headers': headers };
     }
 }
