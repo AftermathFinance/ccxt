@@ -42,7 +42,7 @@ export default class aftermath extends Exchange {
                 'fetchTicker': 'emulated',
                 'fetchTrades': true,
                 'fetchTradingFee': true,
-                'fetchTradingFees': true,
+                'fetchTradingFees': false,
                 'fetchTradingLimits': 'emulated',
                 'fetchTransactions': false,
                 'fetchWithdrawals': true,
