@@ -71,8 +71,8 @@ export default class aftermath extends Exchange {
             'api': {
                 'public': {
                     'post': [
-                        'all-markets',
-                        'markets',
+                        'ccxt/fetchMarkets',
+                        'ccxt/fetchCurrencies',
                         'market/candle-history',
                         'market/orderbook',
                         'market/orderbook-price',
@@ -118,6 +118,7 @@ export default class aftermath extends Exchange {
         });
     }
 
+    // TODO: adapt this to the new handler
     async fetchMarkets (params = {}): Promise<Market[]> {
         const request: Dict = {
             'collateralCoinType': '0x457049371f5b5dc2bda857bb804ca6e93c5a3cae1636d0cd17bb6b6070d19458::usdc::USDC',
@@ -126,6 +127,7 @@ export default class aftermath extends Exchange {
         return this.parseMarkets (response);
     }
 
+    // TODO: adapt this to the new handler's return
     parseMarket (market: Dict): Market {
         // {
         //     "packageId": "0x7c995f9c0c0553c0f3bfac7cf3c8b85716f0ca522305586bd0168ca20aeed277",
@@ -238,6 +240,8 @@ export default class aftermath extends Exchange {
             'info': market,
         });
     }
+
+    // TODO: add `fetchCurrencies` using the new handler
 
     /**
      * @method
