@@ -1,6 +1,6 @@
 import Exchange from './abstract/aftermath.js';
 import { TICK_SIZE } from './base/functions/number.js';
-import type { Market, Dict } from './base/types.js';
+import type { Market, Dict, TradingFeeInterface } from './base/types.js';
 
 const IFIXED_ONE = 1000000000000000000;
 
@@ -237,6 +237,32 @@ export default class aftermath extends Exchange {
             'created': undefined,
             'info': market,
         });
+    }
+
+    /**
+     * @method
+     * @name aftermath#fetchTradingFee
+     * @description fetch the trading fees for a market
+     * @param {string} symbol unified market symbol
+     * @param {object} [params] extra parameters specific to the exchange API endpoint
+     * @returns {object} a [fee structure]{@link https://docs.ccxt.com/#/?id=fee-structure}
+     */
+    async fetchTradingFee (symbol: string, params = {}): Promise<TradingFeeInterface> {
+        await this.loadMarkets ();
+        const market = this.market (symbol);
+        return this.parseTradingFee (market);
+    }
+
+    parseTradingFee (market: Market = undefined): TradingFeeInterface {
+        const symbol = this.safeSymbol (undefined, market);
+        return {
+            'info': {},
+            'symbol': symbol,
+            'maker': this.safeNumber (market, 'maker'),
+            'taker': this.safeNumber (market, 'taker'),
+            'percentage': true,
+            'tierBased': undefined,
+        };
     }
 
     sign (path, api = 'public', method = 'POST', params = {}, headers = undefined, body = undefined) {
